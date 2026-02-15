@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #e0e0e0;
+}
+
+body.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --button-bg: #444444;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 50px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+.theme {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+.theme button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.theme button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px){
+    .theme button span {display: none}
+    .theme button {
+        padding: 12px;
+        border-radius: 50%;
+    }
+}
+
+.theme button.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+    cursor: default;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme button.active:hover {
+    transform: none;
+    opacity: 1;
+}
+
+
+hr {
+    width: 500px;
+}
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: #cdc1b5;
+    border: 6px solid #bbada0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 90px;
+    height: 90px;
+    border: 5px solid #bbada0;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x2{
+    background-color: #eee4da;
+    color: #727371;
+}
+.x4{
+    background-color: #ece0ca;
+    color: #727371;
+}
+.x8{
+    background-color: #f4b17a;
+    color: white;
+}
+.x16{
+    background-color: #f59575;
+    color: white;
+}
+.x32{
+    background-color: #f57c5f;
+    color: white;
+}
+.x64{
+    background-color: #f65d3b;
+    color: white;
+}
+.x128{
+    background-color: #edce71;
+    color: white;
+}
+.x256{
+    background-color: #edcc63;
+    color: white;
+}
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+.x1024{
+    background-color: #eec744;
+    color: white;
+}
+.x2048{
+    background-color: #eec230;
+    color: white;
+}
+.x4096{
+    background-color: #fe3d3d;
+    color: white;
+}
+.x8192{
+    background-color: #ff2020;
+    color: #7f0d00;
+}
